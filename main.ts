@@ -1,6 +1,6 @@
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
     mySprite.setPosition(randint(0, 160), randint(0, 120))
-    info.startCountdown(10)
+    info.startCountdown(5)
 })
 let mySprite: Sprite = null
 music.play(music.stringPlayable("B A G A G F A C5 ", 500), music.PlaybackMode.InBackground)
