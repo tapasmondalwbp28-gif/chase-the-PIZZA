@@ -1,15 +1,11 @@
-function doSomething (mySprite: Sprite, text: string, myLocation: tiles.Location, num2: number) {
-	
-}
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherSprite) {
-    info.changeScoreBy(1)
     mySprite.setPosition(randint(0, 160), randint(0, 120))
     info.startCountdown(10)
 })
 let mySprite: Sprite = null
+music.play(music.stringPlayable("B A G A G F A C5 ", 500), music.PlaybackMode.InBackground)
 scene.setBackgroundColor(7)
 mySprite = sprites.create(assets.image`MAN`, SpriteKind.Player)
-controller.moveSprite(mySprite)
 let PIZZA = sprites.create(img`
     . . . . . . b b b b . . . . . . 
     . . . . . . b 4 4 4 b . . . . . 
@@ -28,3 +24,4 @@ let PIZZA = sprites.create(img`
     4 d d d 4 4 4 . . . . . . . . . 
     4 4 4 4 . . . . . . . . . . . . 
     `, SpriteKind.Food)
+controller.moveSprite(mySprite)
